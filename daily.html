@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js Library -->
+</head>
+<body>
+
+    <div class="dashboard">
+        <h1>💰 Financial Dashboard</h1>
+        <div class="balance-container">
+            <span>Balance:</span> 
+            <strong id="balance">$0.00</strong>
+        </div>
+
+        <div class="tabs">
+            <button id="transactions-tab">📁 Transactions</button>
+            <button id="savings-tab">🏆 Savings Goals</button>
+            <button id="salary-tab">📊 Analytics</button>
+        </div>
+
+        <!-- Transactions Section -->
+        <div id="transactions-section">
+            <h2>Add Transaction</h2>
+            <select id="transaction-type">
+                <option value="expense">Expense</option>
+                <option value="salary">Salary</option>
+            </select>
+            <input type="number" id="amount" placeholder="Enter Amount">
+            <input type="text" id="description" placeholder="Enter Description">
+            <select id="category">
+                <option value="Food">Food</option>
+                <option value="Transport">Transport</option>
+                <option value="Bills">Bills</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Rent">Rent</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <!-- ✅ Added Date Input Field -->
+            <label for="transaction-date"></label>
+            <input type="date" id="transaction-date">
+
+            <button id="add-transaction">+ Add Transaction</button>
+
+            <h3>Transaction List</h3>
+            <div id="expense-list"></div>
+        </div>
+
+        <!-- Savings Goals Section (Initially Hidden) -->
+        <div id="savings-section" style="display: none;">
+            <h2>Add Savings Goal</h2>
+            <input type="text" id="goal-name" placeholder="Goal Name">
+            <input type="number" id="goal-amount" placeholder="Target Amount">
+            <button id="add-goal">+ Add Goal</button>
+
+            <h3>Savings Goals</h3>
+            <div id="goal-list"></div>
+        </div>
+
+        <!-- Analytics Section (Initially Hidden) -->
+        <div id="analytics-section" style="display: none;">
+            <h2>📊 Expense Analytics</h2>
+            <canvas id="analyticsChart"></canvas> <!-- Pie Chart -->
+            <h3>Transaction Breakdown</h3>
+            <div id="analytics-list"></div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
