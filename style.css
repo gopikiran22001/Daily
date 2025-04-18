@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    text-align: center;
+}
+
+.dashboard {
+    max-width: 600px;
+    margin: 30px auto;
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.balance-container {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.tabs {
+    margin-bottom: 20px;
+}
+
+button {
+    background: #2575fc;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background 0.3s, transform 0.2s ease-in-out;
+}
+
+button:hover {
+    background: #6a11cb;
+    transform: scale(1.05);
+}
+
+input, select {
+    width: 80%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#expense-list, #goal-list {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.transaction-card {
+    background: #f8f9fa;
+    color: black;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+}
+
+.expense-amount {
+    color: red;
+    font-weight: bold;
+}
+
+.salary-amount {
+    color: green;
+    font-weight: bold;
+}
+
+.goal-amount {
+    color: #2575fc;
+    font-weight: bold;
+}
+
+.goal-progress {
+    color: green;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .dashboard {
+        max-width: 90%;
+        margin: 10px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    input, select {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .tabs button {
+        flex: 1;
+        margin: 5px 0;
+    }
+
+    .transaction-card {
+        font-size: 0.9em;
+    }
+}
